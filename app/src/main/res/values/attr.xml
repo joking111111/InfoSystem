@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="custom_attrs">
+        <attr name="btn_visibility" format="boolean"></attr>
+        <attr name="isTitle" format="boolean"></attr>
+    </declare-styleable>
+
+    <style name="add_style">
+        <item name="isTitle">true</item>
+    </style>
+
+    <style name="delete_style">
+        <item name="isTitle">false</item>
+    </style>
+</resources>

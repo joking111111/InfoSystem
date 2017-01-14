@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                    style="@style/CardViewStyle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding">
+        <!--style="@style/Widget.AppCompat.Button.Borderless"-->
+
+        <ImageView
+            android:id="@+id/iv_pic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/frog"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/TitleStyle"
+                android:text="江蛤蛤"/>
+
+            <ImageView
+                android:id="@+id/divider"
+                style="@style/Divider"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_class"
+                    style="@style/TextStyle"
+                    android:drawableLeft="@drawable/ic_cla"
+                    android:text="20142111XX"/>
+
+                <TextView
+                    android:id="@+id/tv_NO"
+                    style="@style/TextStyle"
+                    android:drawableLeft="@drawable/ic_no"
+                    android:text="2014210XXX"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

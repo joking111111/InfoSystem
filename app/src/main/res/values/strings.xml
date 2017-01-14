@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">InfoSystem</string>
+    <string name="search_input">输入班级，学号或者姓名</string>
+    <string name="add_name">姓名</string>
+    <string name="add_class">班级</string>
+    <string name="add_NO_id">学号</string>
+    <string name="add_content">内容</string>
+    <string name="not_null">此处不能为空</string>
+</resources>

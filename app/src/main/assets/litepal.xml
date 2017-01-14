@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+
+    <dbname value="StuInfo"></dbname>
+
+    <version value="1"></version>
+
+    <list>
+        <mapping class="com.joking.infosystem.bean.StuInfo"></mapping>
+        <mapping class="com.joking.infosystem.bean.StuDetail"></mapping>
+        <mapping class="com.joking.infosystem.bean.StuPrize"></mapping>
+        <mapping class="com.joking.infosystem.bean.StuScore"></mapping>
+    </list>
+</litepal>

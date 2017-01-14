@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--很好的性能优化！-->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/text"
+        style="@style/DetailStyle"
+        android:layout_centerInParent="true"
+        android:text="数分：100" />
+
+    <ImageView
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@android:drawable/ic_delete"
+        android:visibility="invisible" />
+</merge>
