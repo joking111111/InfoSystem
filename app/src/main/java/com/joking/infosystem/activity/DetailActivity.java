@@ -19,12 +19,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.joking.infosystem.R;
 import com.joking.infosystem.bean.StuBase;
 import com.joking.infosystem.bean.StuDetail;
 import com.joking.infosystem.bean.StuInfo;
 import com.joking.infosystem.bean.StuPrize;
 import com.joking.infosystem.bean.StuScore;
-import com.joking.infosystem.R;
 import com.joking.infosystem.util.BeanUtil;
 import com.joking.infosystem.util.ViewUtil;
 import com.joking.infosystem.widget.MyView;
@@ -59,11 +59,11 @@ public class DetailActivity extends AppCompatActivity {
     public static void actionStart(Context context, String id, int... flags) {
         Intent intent = new Intent(context, DetailActivity.class);
         intent.putExtra(StuInfo.ID, id);
-        if (flags.length > 0) {
-            for (int flag : flags) {
-                intent.addFlags(flag);
-            }
+
+        for (int flag : flags) {
+            intent.addFlags(flag);
         }
+
         context.startActivity(intent);
     }
 
