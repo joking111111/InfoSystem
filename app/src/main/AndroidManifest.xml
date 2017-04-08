@@ -3,7 +3,7 @@
           package="com.joking.infosystem">
 
     <application
-        android:name="org.litepal.LitePalApplication"
+        android:name="com.joking.infosystem.App"
         android:allowBackup="true"
         android:icon="@mipmap/logo"
         android:label="@string/app_name"
