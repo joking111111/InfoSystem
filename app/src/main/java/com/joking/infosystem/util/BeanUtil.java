@@ -72,7 +72,7 @@ public class BeanUtil {
         stuPrizes.clear();
         stuScores.clear();
 
-        // 貌似不用置空
+        // 不用置空
 //        stuDetails = null;
 //        stuPrizes = null;
 //        stuScores = null;
