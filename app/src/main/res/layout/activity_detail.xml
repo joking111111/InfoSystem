@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -10,7 +10,7 @@
 
         <include
             android:id="@+id/toolbar_detail"
-            layout="@layout/item_toolbar" />
+            layout="@layout/item_toolbar"/>
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.widget.NestedScrollView
@@ -24,7 +24,7 @@
             android:clipToPadding="false"
             android:orientation="vertical">
 
-            <include layout="@layout/item_stu_pic" />
+            <include layout="@layout/item_stu_pic"/>
 
             <android.support.v7.widget.CardView style="@style/CardViewStyle">
 
@@ -41,9 +41,9 @@
                         android:layout_height="wrap_content"
                         android:text="详细资料"
                         app:btn_visibility="false"
-                        app:isTitle="true" />
+                        app:isTitle="true"/>
 
-                    <ImageView style="@style/Divider" />
+                    <ImageView style="@style/Divider"/>
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -63,9 +63,9 @@
                         android:layout_height="wrap_content"
                         android:text="奖励处分"
                         app:btn_visibility="false"
-                        app:isTitle="true" />
+                        app:isTitle="true"/>
 
-                    <ImageView style="@style/Divider" />
+                    <ImageView style="@style/Divider"/>
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
@@ -85,9 +85,9 @@
                         android:layout_height="wrap_content"
                         android:text="成绩"
                         app:btn_visibility="false"
-                        app:isTitle="true" />
+                        app:isTitle="true"/>
 
-                    <ImageView style="@style/Divider" />
+                    <ImageView style="@style/Divider"/>
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>

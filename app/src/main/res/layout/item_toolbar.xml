@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.v7.widget.Toolbar
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/MyToolbar"
     app:layout_scrollFlags="scroll|enterAlways|snap"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-    app:titleTextAppearance="@style/ToolbarTextAppearance.Title" />
+    app:titleTextAppearance="@style/ToolbarTextAppearance.Title"/>
     <!--app:subtitleTextAppearance="@style/ToolbarTextAppearance.Subtitle"-->

@@ -5,15 +5,15 @@
         android:id="@+id/edit"
         android:icon="@android:drawable/ic_menu_edit"
         android:title="修改"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/delete"
         android:icon="@android:drawable/ic_menu_delete"
         android:title="删除"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/save"
         android:title="保存"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
 </menu>

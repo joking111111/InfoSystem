@@ -1,15 +1,16 @@
 package com.joking.infosystem.util;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.joking.infosystem.bean.StuBase;
+import com.joking.infosystem.App;
 import com.joking.infosystem.R;
+import com.joking.infosystem.bean.StuBase;
 import com.joking.infosystem.widget.MyView;
 
 import java.lang.reflect.Field;
@@ -52,35 +53,34 @@ public class ViewUtil {
         return snackbar;
     }
 
-    public static AlertDialog createDialog(final Context context,
+    public static AlertDialog createDialog(Context context,
                                            String title,
                                            View view,
                                            DialogInterface.OnClickListener ensure) {
 
-        final AlertDialog alertDialog = new AlertDialog.Builder(context).setTitle(title)
+        //        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+//                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+//        alertDialog.addContentView(view, lp);
+
+        return new AlertDialog.Builder(context)
+                .setTitle(title)
                 .setPositiveButton("确定", ensure)
                 .setNegativeButton("取消", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(context, "取消", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(App.getContext(), "取消", Toast.LENGTH_SHORT).show();
                         setCancelable(dialog, true);
                     }
                 })
                 .setOnCancelListener(new DialogInterface.OnCancelListener() {
                     @Override
                     public void onCancel(DialogInterface dialog) {
-                        Toast.makeText(context, "取消", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(App.getContext(), "取消", Toast.LENGTH_SHORT).show();
                         setCancelable(dialog, true);
                     }
                 })
                 .setView(view)
                 .create();
-
-//        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-//                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-//        alertDialog.addContentView(view, lp);
-
-        return alertDialog;
     }
 
     public static void setCancelable(DialogInterface dialog, boolean cancelable) {

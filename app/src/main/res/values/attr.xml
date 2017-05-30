@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="custom_attrs">
-        <attr name="btn_visibility" format="boolean"></attr>
-        <attr name="isTitle" format="boolean"></attr>
+        <attr name="btn_visibility" format="boolean"/>
+        <attr name="isTitle" format="boolean"/>
     </declare-styleable>
 
     <style name="add_style">

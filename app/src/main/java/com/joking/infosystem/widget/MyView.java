@@ -5,7 +5,6 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -42,7 +41,7 @@ public class MyView extends RelativeLayout {
     public MyView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
-        LayoutInflater.from(context).inflate(R.layout.myview, this);
+        LayoutInflater.from(context).inflate(R.layout.myview, this, true);// false会崩
         btn = (ImageView) findViewById(R.id.btn);
         text = (TextView) findViewById(R.id.text);
 
@@ -51,7 +50,7 @@ public class MyView extends RelativeLayout {
                     ViewGroup.LayoutParams.WRAP_CONTENT);
             int layout_height = attrs.getAttributeIntValue(SYSTEM, "layout_height",
                     ViewGroup.LayoutParams.WRAP_CONTENT);
-            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(layout_width, layout_height);
+            RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(layout_width, layout_height);
             setLayoutParams(lp);
 
             String content = attrs.getAttributeValue(SYSTEM, "text");

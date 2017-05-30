@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -10,7 +11,7 @@
 
         <include
             android:id="@+id/toolbar_main"
-            layout="@layout/item_toolbar" />
+            layout="@layout/item_toolbar"/>
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v7.widget.RecyclerView
@@ -18,12 +19,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         style="@style/FabStyle"
         app:borderWidth="0dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        app:rippleColor="@color/colorPrimary" />
+        app:rippleColor="@color/colorPrimary"
+        />
+    <!--behavior的全路径-->
 </android.support.design.widget.CoordinatorLayout>

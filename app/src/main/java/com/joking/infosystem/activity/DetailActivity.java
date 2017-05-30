@@ -19,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.joking.infosystem.App;
 import com.joking.infosystem.R;
 import com.joking.infosystem.bean.StuBase;
 import com.joking.infosystem.bean.StuDetail;
@@ -124,9 +125,9 @@ public class DetailActivity extends AppCompatActivity {
                             String text = newer.getText().toString();
                             // 这里不用禁用
                             if (TextUtils.isEmpty(text)) {
-                                Toast.makeText(DetailActivity.this, "失败", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(App.getContext(), "失败", Toast.LENGTH_SHORT).show();
                             } else {
-                                Toast.makeText(DetailActivity.this, "成功", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(App.getContext(), "成功", Toast.LENGTH_SHORT).show();
                                 addView(type, text);
                             }
                         }
@@ -238,6 +239,11 @@ public class DetailActivity extends AppCompatActivity {
         tempDelete.clear();
     }
 
+    /**
+     * 状态改变
+     * @param menu
+     * @return
+     */
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         if (isUpdate) {
@@ -267,7 +273,7 @@ public class DetailActivity extends AppCompatActivity {
                 break;
             case R.id.edit:
                 isUpdate = true;
-                changeState(isUpdate);
+                changeState(true);
                 invalidateOptionsMenu();
                 break;
             case R.id.delete:
@@ -276,7 +282,7 @@ public class DetailActivity extends AppCompatActivity {
             case R.id.save:
                 save();
                 isUpdate = false;
-                changeState(isUpdate);
+                changeState(false);
                 invalidateOptionsMenu();
                 Toast.makeText(this, "保存成功！", Toast.LENGTH_SHORT).show();
                 break;

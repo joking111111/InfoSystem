@@ -18,12 +18,13 @@ import android.view.View;
 import android.widget.AutoCompleteTextView;
 import android.widget.Toast;
 
+import com.joking.infosystem.App;
+import com.joking.infosystem.R;
 import com.joking.infosystem.adapter.StuInfoAdapter;
 import com.joking.infosystem.bean.StuDetail;
 import com.joking.infosystem.bean.StuInfo;
 import com.joking.infosystem.bean.StuPrize;
 import com.joking.infosystem.bean.StuScore;
-import com.joking.infosystem.R;
 import com.joking.infosystem.util.ViewUtil;
 
 import org.litepal.crud.DataSupport;
@@ -38,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
     private StuInfoAdapter mAdapter;
     private List<StuInfo> result = new ArrayList<>();
 
-    private String[] Names = {"诸葛亮", "王朗", "江总", "谷阿莫", "金坷拉"};
-    private int[] Pics = {R.drawable.duck, R.drawable.elephant,
+    private static final String[] Names = {"诸葛亮", "王朗", "江总", "谷阿莫", "金坷拉"};
+    private static final int[] Pics = {R.drawable.duck, R.drawable.elephant,
             R.drawable.frog, R.drawable.rabbit, R.drawable.turtle};
 
     @Override
@@ -74,10 +75,10 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 if (add(name, clazz, NO_id)) {
-                                    Toast.makeText(MainActivity.this, "新建成功", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(App.getContext(), "新建成功", Toast.LENGTH_SHORT).show();
                                     ViewUtil.setCancelable(dialog, true);
                                 } else {
-                                    Toast.makeText(MainActivity.this, "新建失败", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(App.getContext(), "新建失败", Toast.LENGTH_SHORT).show();
                                     ViewUtil.setCancelable(dialog, false);
                                 }
                             }
@@ -169,13 +170,13 @@ public class MainActivity extends AppCompatActivity {
             public boolean onQueryTextSubmit(String query) {
                 if (query.equals("all")) {
                     // TODO: 2016/12/20 搜索内容为空，搜索全部
-                    Toast.makeText(MainActivity.this, "查找所有", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(App.getContext(), "查找所有", Toast.LENGTH_SHORT).show();
                     result.clear();
                     refresh();
                 } else if (search(query)) {
-                    Toast.makeText(MainActivity.this, "查找成功", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(App.getContext(), "查找成功", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(MainActivity.this, "查找失败", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(App.getContext(), "查找失败", Toast.LENGTH_SHORT).show();
                 }
                 return true;
             }
