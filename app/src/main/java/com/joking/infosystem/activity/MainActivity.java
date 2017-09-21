@@ -164,6 +164,7 @@ public class MainActivity extends AppCompatActivity {
         MenuItem menuItem = menu.findItem(R.id.search);//在菜单中找到对应控件的item
         final SearchView searchView = (SearchView) MenuItemCompat.getActionView(menuItem);
         searchView.setQueryHint(getResources().getString(R.string.search_input));
+
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             // 当搜索内容为空时此方法不会调用
             @Override
